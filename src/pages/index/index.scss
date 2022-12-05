@@ -1,4 +1,40 @@
 .index{
   background: #f6f6f6;
   height: 100vh;
+  padding: 0 0;
+}
+
+.title{
+  background: white;
+  text-align: center;
+  margin-bottom: 20px;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.date-select{
+  background: white;
+  text-align: center;
+  margin: 0 10px 10px 10px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.life-select{
+  background: white;
+  text-align: center;
+  margin: 0 10px 10px 10px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.life-box{
+  height: 75vh;
+  background: white;
+  overflow: scroll;
+  margin: 0 10px 0 10px;
 }

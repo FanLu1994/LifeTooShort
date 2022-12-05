@@ -1,6 +1,7 @@
 import { Component, PropsWithChildren } from 'react'
 import { View, Text,Picker } from '@tarojs/components'
-import { AtButton,AtList,AtListItem,AtSlider } from 'taro-ui'
+import { AtSlider } from 'taro-ui'
+import LifeBox from "../../components/LifeBox";
 
 import "taro-ui/dist/style/components/button.scss" // 按需引入
 import "taro-ui/dist/style/components/list.scss";
@@ -46,18 +47,20 @@ export default class Index extends Component<PropsWithChildren> {
   render () {
     return (
       <View className='index'>
-        <View className='page-section'>
-          <Text>请选择您的生日：</Text>
+        <View className='title'>
+          <Text>人生苦短，及时行乐</Text>
+        </View>
+        <View className='date-select'>
           <View>
             <Picker mode='date' onChange={this.onDateChange} value={this.state.today.toString()}>
               <View>
-                <Text>您的生日为：</Text>
+                <Text>请选择您的生日：</Text>
                 <Text>{this.dateFormat(this.state.dateSel)}</Text>
               </View>
             </Picker>
           </View>
         </View>
-        <View>
+        <View className='life-select'>
           <Text>请选择你希望的生命长度：{this.state.life}</Text>
           <View>
             <AtSlider step={1} value={this.state.life}
@@ -68,6 +71,9 @@ export default class Index extends Component<PropsWithChildren> {
                       blockColor='#4285F4'
                       blockSize={24}></AtSlider>
           </View>
+        </View>
+        <View className='life-box'>
+          <LifeBox name="测试数据"></LifeBox>
         </View>
       </View>
     )
