@@ -1,3 +1,36 @@
 .life-box{
   background: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+
+  i{
+    width: 40px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+  }
+}
+
+
+.littleBox{
+  width: 40px;
+  height: 40px;
+  background: #6EE7B7;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+}
+
+.life-box i{
+
+}
+
+.littleBox:last-child{
+  margin-right: auto;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
 }

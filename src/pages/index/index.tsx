@@ -72,7 +72,7 @@ export default class Index extends Component<PropsWithChildren> {
                       blockSize={24}></AtSlider>
           </View>
         </View>
-        <View className='life-box'>
+        <View className='life-box-container'>
           <LifeBox name="测试数据"></LifeBox>
         </View>
       </View>

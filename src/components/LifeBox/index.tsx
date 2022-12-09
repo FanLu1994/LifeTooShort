@@ -19,13 +19,19 @@ export default class LifeBox extends Component<LifeBoxProps> {
   componentWillMount () { }
 
   componentDidMount () {
-    console.log(this.props.name)
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10000; i++) {
       this.state.array.push(i)
     }
-    console.log(this.state.array)
     this.setState({
       array:this.state.array
+    })
+
+    // 监听鼠标滚轮
+    console.log( document.getElementById('life-box'))
+    document.getElementById('life-box')!.addEventListener('wheel',(e)=>{
+      e.preventDefault()
+      let event = e as window.Event
+      console.log(event.wheelDelta)
     })
   }
 
@@ -38,14 +44,17 @@ export default class LifeBox extends Component<LifeBoxProps> {
 
   render () {
     return (
-      <View className='life-box'>
-        {this.state.array}
-        {
-          this.state.array.map((item:any)=>{
-            console.log(item)
-            return <p key={item}>{item}-{this.props.name}</p>
-          })
-        }
+      <View >
+        <div className='life-box' id='life-box'>
+          {
+            this.state.array.map((item:any)=>{
+              return <div key={item} className="littleBox"></div>
+            })
+          }
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
       </View>
     )
   }
